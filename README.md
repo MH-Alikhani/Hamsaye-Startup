@@ -61,7 +61,8 @@ The platform allows for easy and secure transactions between users.
 It provides a seamless experience for both service providers and customers.
 Hamsaye is committed to fostering a strong sense of community and helping people connect with their neighbors. 
 
-
+## Founder and Innovator
+This idea and startup invent and founded by Mohammad Hossein Alikhani
 
 
 
