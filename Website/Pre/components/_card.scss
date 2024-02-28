@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
 
+    flex-direction: column;
     background-color: #ffffff;
     position: relative;
 
@@ -25,7 +26,7 @@
       transform: scale(1.01);
       box-shadow: 0 15px 20px #b9a08d;
     }
-    &:last-child {
+    &:first-child {
       margin-left: 44px;
     }
 
@@ -40,17 +41,22 @@
       top: 10xp;
       right: 50px;
 
-      width: 192px;
+      width: 195px;
       height: 313px;
       border-radius: 10px;
       border: #e0d5cc;
-      background-color: #e0d5cc;
+      background-color: $color-primary;
 
       &-1 {
         transform: rotate(10deg);
       }
       &-2 {
         transform: rotate(-10deg);
+      }
+      > span {
+        font-size: 24px;
+        font-weight: bold;
+        color: #0000;
       }
     }
   }

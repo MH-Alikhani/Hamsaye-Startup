@@ -1,16 +1,45 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  direction: rtl;
+  font-size: 62.5%; }
+
+body {
+  height: 100vh;
+  font-family: "Vazir";
+  background-color: #f7f4f2; }
+
+header {
+  height: 10vh; }
+
 main {
-  height: 90vh;
+  height: 90vh; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+@font-face {
+  font-family: "Vazir";
+  src: url(../assets/Font/Vazirmatn-Regular.ttf); }
+
+.home {
   display: flex;
   align-items: center;
   justify-content: space-evenly; }
-  main .home-title {
+  .home .home-title {
     text-align: right; }
-    main .home-title > span:first-child {
+    .home .home-title > span:first-child {
       font-size: 128px;
       font-weight: bold; }
-    main .home-title > span:last-child {
+    .home .home-title > span:last-child {
       font-size: 32px; }
-  main .home-banner {
+  .home .home-banner {
     display: flex;
     width: 364.89px;
     height: 476.34px;
@@ -18,71 +47,79 @@ main {
     background-size: 100% 100%;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     background: url("../assets/images/Frame 43.png"); }
-    main .home-banner > div {
+    .home .home-banner > div {
       height: 100%;
       width: calc(100% / 3);
       border: 10px solid rgba(224, 213, 204, 0.85); }
-      main .home-banner > div:first-child {
+      .home .home-banner > div:first-child {
         border-radius: 0 10px 10px 0; }
-      main .home-banner > div:last-child {
+      .home .home-banner > div:last-child {
         border-radius: 10px 0 0 10px; }
 
 .about-page {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative; }
+  justify-content: space-evenly; }
 
 .contact-us {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative; }
-  .contact-us section {
+  background-image: url("/assets/images/circles.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .contact-us .mail-box {
+    width: 50rem;
+    height: 10rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: space-evenly;
+    margin-right: 10rem; }
+    .contact-us .mail-box__img {
+      width: 10rem; }
+    .contact-us .mail-box__text-box {
+      width: 40rem;
+      text-align: center;
+      font-weight: bold;
+      font-family: "Vazir"; }
+      .contact-us .mail-box__text-box__head {
+        font-size: 4rem;
+        transition: all 0.5s; }
+        .contact-us .mail-box__text-box__head:hover {
+          color: #98765d; }
+      .contact-us .mail-box__text-box__link {
+        font-size: 1.6rem;
+        color: #98765d;
+        opacity: 1; }
+  .contact-us .mail-box-1 {
+    position: absolute;
+    top: 25rem;
+    right: 5rem; }
+  .contact-us .mail-box-2 {
+    position: absolute;
+    top: 45rem;
+    right: 5rem; }
+    .contact-us .mail-box-2__img {
+      width: 10rem; }
 
 .navigation {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #191410;
-  font-family: vazir; }
+  font-family: "Vazir"; }
   .navigation__link {
-    transition: all 0.2s; }
+    transition: all 0.3s ease-out; }
     .navigation__link:hover {
-      color: #a28167;
-      border-bottom: 1.4px solid #a28167; }
+      text-shadow: 1.5px 1.5px #a28167;
+      border-bottom: 2px solid #a28167; }
   .navigation__logo {
-    width: 64px;
-    margin: 0 45px; }
+    width: 6.4rem;
+    margin: 0 4.5rem; }
 
 .header {
   font-size: 20px;
   font-weight: bold;
   padding: 20px 0;
   width: 100%;
-  font-family: Vasir;
-  height: 10vh; }
-
-.link {
-  text-decoration: none;
-  text-align: center;
-  position: absolute;
-  top: 0px;
-  left: 120px;
-  transition: all 0.2s;
-  font-size: 20px;
-  font-weight: bold;
-  color: #33271f;
-  font-family: Vasir; }
-  .link:hover {
-    border-bottom: 2px solid #a28167;
-    transform: scale(1.1); }
+  font-family: "Vazir"; }
 
 .card-box {
   margin: 20px 0;
@@ -96,6 +133,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #ffffff;
     position: relative;
     width: 326px;
@@ -104,7 +142,7 @@ main {
     .card-box__card:hover {
       transform: scale(1.01);
       box-shadow: 0 15px 20px #b9a08d; }
-    .card-box__card:last-child {
+    .card-box__card:first-child {
       margin-left: 44px; }
     .card-box__card__img {
       z-index: 4;
@@ -114,7 +152,7 @@ main {
       position: absolute;
       top: 10xp;
       right: 50px;
-      width: 192px;
+      width: 195px;
       height: 313px;
       border-radius: 10px;
       border: #e0d5cc;
@@ -123,27 +161,7 @@ main {
         transform: rotate(10deg); }
       .card-box__card__spawn-2 {
         transform: rotate(-10deg); }
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-html {
-  direction: rtl;
-  font-size: 10px; }
-
-body {
-  height: 100vh;
-  font-family: "Vazir";
-  background-color: #f7f4f2; }
-
-a {
-  color: inherit;
-  text-decoration: none; }
-
-@font-face {
-  font-family: "Vazir";
-  src: url(../assets/Font/Vazirmatn-Regular.ttf); }
+      .card-box__card__spawn > span {
+        font-size: 24px;
+        font-weight: bold;
+        color: #0000; }

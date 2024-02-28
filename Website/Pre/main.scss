@@ -1,3 +1,7 @@
+//base file
+@import "base/variables";
+@import "base/reset.scss";
+@import "base/typography.scss";
 //pages
 @import "pages/home";
 @import "pages/AboutUs/about-page";
@@ -6,7 +10,4 @@
 @import "layout/navigation";
 @import "layout/_header.scss";
 //components file
-@import "components/_buttons.scss";
-@import "components/card"; //base file
-@import "base/_reset.scss";
-@import "base/_typography.scss";
+@import "components/card";

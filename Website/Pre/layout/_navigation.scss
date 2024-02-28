@@ -3,18 +3,18 @@
   align-items: center;
   justify-content: center;
   color: #191410;
-  font-family: vazir;
+  font-family: $font-family;
 
   &__link {
-    transition: all 0.2s;
+    transition: all 0.3s ease-out;
     &:hover {
-      color: #a28167;
-      border-bottom: 1.4px solid #a28167;
+      text-shadow: 1.5px 1.5px $color-gold;
+      border-bottom: 2px solid $color-gold;
     }
   }
 
   &__logo {
-    width: 64px;
-    margin: 0 45px;
+    width: 6.4rem;
+    margin: 0 4.5rem;
   }
 }

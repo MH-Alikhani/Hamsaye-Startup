@@ -8,13 +8,20 @@
 
 html {
   direction: rtl;
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 body {
   height: 100vh;
-  font-family: "Vazir";
-  background-color: #f7f4f2;
+  font-family: $font-family;
+  background-color: $color-body;
+}
+
+header {
+  height: 10vh;
+}
+main {
+  height: 90vh;
 }
 
 a {
