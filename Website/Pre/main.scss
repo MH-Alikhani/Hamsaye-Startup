@@ -1,0 +1,12 @@
+//pages
+@import "pages/home";
+@import "pages/AboutUs/about-page";
+@import "pages/contact";
+//layout file
+@import "layout/navigation";
+@import "layout/_header.scss";
+//components file
+@import "components/_buttons.scss";
+@import "components/card"; //base file
+@import "base/_reset.scss";
+@import "base/_typography.scss";

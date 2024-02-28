@@ -1,0 +1,57 @@
+.card-box {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__card {
+    transition: all 0.5s;
+
+    border: 1.4px solid #b9a08d;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+    position: relative;
+
+    width: 326px;
+    height: 471px;
+
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 15px 20px #b9a08d;
+    }
+    &:last-child {
+      margin-left: 44px;
+    }
+
+    &__img {
+      z-index: 4;
+      width: 202px;
+      height: 293px;
+    }
+
+    &__spawn {
+      position: absolute;
+      top: 10xp;
+      right: 50px;
+
+      width: 192px;
+      height: 313px;
+      border-radius: 10px;
+      border: #e0d5cc;
+      background-color: #e0d5cc;
+
+      &-1 {
+        transform: rotate(10deg);
+      }
+      &-2 {
+        transform: rotate(-10deg);
+      }
+    }
+  }
+}

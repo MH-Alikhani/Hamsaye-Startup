@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  font-family: "Vazir";
+  background-color: #f7f4f2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

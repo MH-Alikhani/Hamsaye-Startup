@@ -1,0 +1,47 @@
+main {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  // Text in home
+  .home-title {
+    text-align: right;
+    > span {
+      &:first-child {
+        font: {
+          size: 128px;
+          weight: bold;
+        }
+      }
+      &:last-child {
+        font-size: 32px;
+      }
+    }
+  }
+
+  // Home banner
+  .home-banner {
+    display: flex;
+    width: 364.89px;
+    height: 476.34px;
+    border-radius: 10px;
+    background-size: 100% 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    background: url("../assets/images/Frame\ 43.png");
+
+    // 3 boxes of home banner
+    > div {
+      height: 100%;
+      width: calc(100% / 3);
+      border: 10px solid rgba(224, 213, 204, 0.85);
+
+      &:first-child {
+        border-radius: 0 10px 10px 0;
+      }
+      &:last-child {
+        border-radius: 10px 0 0 10px;
+      }
+    }
+  }
+}
