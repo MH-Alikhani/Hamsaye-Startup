@@ -4,30 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="shortcut icon"
+      type="image"
+      href="/assets/images/logo-gold.png"
+    />
     <title>همسایه | درباره ما</title>
   </head>
   <body>
     <header class="header">
       <!-- header -->
       <nav class="navigation">
-        <a class="navigation__link" href="/pages/contact-us.html">
-          ارتباط با ما
-        </a>
-
+        <a class="navigation__link" href="/pages/AboutUs/about-page.html"
+          >درباره ما</a
+        >
         <a href="/index.html"
           ><img
             class="navigation__logo"
             src="../../assets/images/logo-gold.png"
         /></a>
-
-        <a class="navigation__link" href="/pages/AboutUs/about-page.html"
-          >درباره ما</a
-        >
+        <a class="navigation__link" href="/pages/contact-us.html">
+          ارتباط با ما
+        </a>
       </nav>
     </header>
     <main class="about-page">
       <section class="card-box">
-        <div class="card-box__card">
+        <a href="/pages/AboutUs/about-page-hamsaye.html" class="card-box__card">
           <div class="card-box__card__spawn card-box__card__spawn-2">
             &nbsp;
           </div>
@@ -36,8 +39,9 @@
             src="../../assets/images/image2.png"
             alt="pic"
           />
-        </div>
-        <div class="card-box__card">
+          <span class="card-box__card__text">درباره همسایه</span>
+        </a>
+        <a href="/pages/AboutUs/about-page-members.html" class="card-box__card">
           <div class="card-box__card__spawn card-box__card__spawn-1">
             &nbsp;
           </div>
@@ -46,8 +50,8 @@
             src="../../assets/images/image.png"
             alt="pic"
           />
-          <span>درباره اعضا </span>
-        </div>
+          <span class="card-box__card__text">درباره اعضاء </span>
+        </a>
       </section>
     </main>
   </body>

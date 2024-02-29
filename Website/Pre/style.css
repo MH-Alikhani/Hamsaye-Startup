@@ -32,14 +32,22 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-evenly; }
-  .home .home-title {
+  .home-title {
     text-align: right; }
-    .home .home-title > span:first-child {
+    .home-title > span:first-child {
       font-size: 128px;
       font-weight: bold; }
-    .home .home-title > span:last-child {
+    .home-title > span:last-child {
       font-size: 32px; }
-  .home .home-banner {
+  .home__square {
+    background-color: #e0d5cc;
+    width: 34rem;
+    height: 47rem;
+    transform: rotate(15deg);
+    position: absolute;
+    left: 27rem;
+    z-index: -1; }
+  .home-banner {
     display: flex;
     width: 364.89px;
     height: 476.34px;
@@ -47,13 +55,13 @@ a {
     background-size: 100% 100%;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     background: url("../assets/images/Frame 43.png"); }
-    .home .home-banner > div {
+    .home-banner > div {
       height: 100%;
       width: calc(100% / 3);
       border: 10px solid rgba(224, 213, 204, 0.85); }
-      .home .home-banner > div:first-child {
+      .home-banner > div:first-child {
         border-radius: 0 10px 10px 0; }
-      .home .home-banner > div:last-child {
+      .home-banner > div:last-child {
         border-radius: 10px 0 0 10px; }
 
 .about-page {
@@ -122,46 +130,50 @@ a {
   font-family: "Vazir"; }
 
 .card-box {
-  margin: 20px 0;
+  margin: 2rem 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center; }
   .card-box__card {
     transition: all 0.5s;
+    position: relative;
     border: 1.4px solid #b9a08d;
-    border-radius: 10px;
+    border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
     position: relative;
-    width: 326px;
-    height: 471px;
+    width: 32.6rem;
+    height: 47.1rem;
     cursor: pointer; }
     .card-box__card:hover {
       transform: scale(1.01);
-      box-shadow: 0 15px 20px #b9a08d; }
+      box-shadow: 0 1.5rem 2rem #b9a08d; }
     .card-box__card:first-child {
-      margin-left: 44px; }
+      margin-left: 4.4rem; }
     .card-box__card__img {
       z-index: 4;
-      width: 202px;
-      height: 293px; }
+      width: 20.2rem;
+      height: 29.3rem; }
     .card-box__card__spawn {
       position: absolute;
-      top: 10xp;
-      right: 50px;
+      top: 50%;
+      left: 50%;
       width: 195px;
       height: 313px;
       border-radius: 10px;
       border: #e0d5cc;
       background-color: #e0d5cc; }
       .card-box__card__spawn-1 {
-        transform: rotate(10deg); }
+        transform: translate(-45%, -57%) rotate(10deg); }
       .card-box__card__spawn-2 {
-        transform: rotate(-10deg); }
-      .card-box__card__spawn > span {
-        font-size: 24px;
-        font-weight: bold;
-        color: #0000; }
+        transform: translate(-55%, -57%) rotate(-10deg); }
+
+.card-box__card__text {
+  position: absolute;
+  bottom: 8%;
+  font-weight: bold;
+  font-size: 2.2rem;
+  font-family: "Vazir"; }

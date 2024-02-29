@@ -4,7 +4,7 @@
   justify-content: space-evenly;
 
   // Text in home
-  .home-title {
+  &-title {
     text-align: right;
     > span {
       &:first-child {
@@ -19,8 +19,18 @@
     }
   }
 
+  //home square behind pic
+  &__square {
+    background-color: $color-primary;
+    width: 34rem;
+    height: 47rem;
+    transform: rotate(15deg);
+    position: absolute;
+    left: 27rem;
+    z-index: -1;
+  }
   // Home banner
-  .home-banner {
+  &-banner {
     display: flex;
     width: 364.89px;
     height: 476.34px;
