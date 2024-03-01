@@ -1,0 +1,69 @@
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/images/circles.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-us .mail-box {
+  width: 100%;
+  height: 10rem;
+  padding-left: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact-us .mail-box__img {
+  width: 10rem;
+}
+.contact-us .mail-box__text-box {
+  width: 40rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Vazir", sans-serif;
+}
+.contact-us .mail-box__text-box__head {
+  font-size: 4rem;
+  transition: all 0.5s;
+}
+.contact-us .mail-box__text-box__head:hover {
+  color: #98765d;
+}
+.contact-us .mail-box__text-box__link {
+  font-size: 1.6rem;
+  color: #98765d;
+  opacity: 1;
+}
+.contact-us .mail-box-2 {
+  margin-top: 10rem;
+}
+.contact-us .mail-box-2__img {
+  width: 10rem;
+}
+
+@media (max-width: 37.5em) {
+  .mail-box {
+    padding-right: 45%;
+  }
+}
+@media (max-width: 56.25em) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contact-us .mail-box {
+    padding: 0;
+    flex-direction: column;
+  }
+  .contact-us .mail-box__text-box__head {
+    font-size: 3rem;
+  }
+  .contact-us .mail-box__img {
+    width: 6rem;
+  }
+  .contact-us .mail-box-2__img {
+    width: 6rem;
+  }
+}/*# sourceMappingURL=contact-us.css.map */

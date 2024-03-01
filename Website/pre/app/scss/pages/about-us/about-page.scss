@@ -1,0 +1,119 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
+.about-page {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card-box {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__card {
+    transition: all 0.5s;
+    position: relative;
+    border: 1.4px solid $color-gold-2;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    background-color: $color-white;
+    position: relative;
+
+    width: 32.6rem;
+    height: 47.1rem;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 1.5rem 2rem $color-gold-2;
+    }
+    &:first-child {
+      margin-left: 4.4rem;
+    }
+
+    &__img {
+      z-index: 4;
+      width: 20.2rem;
+      height: 29.3rem;
+    }
+
+    &__spawn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 19.5rem;
+      height: 31.3rem;
+      border-radius: 1rem;
+      border: $color-primary;
+      background-color: $color-primary;
+
+      &-1 {
+        transform: translate(-45%, -57%) rotate(10deg);
+      }
+      &-2 {
+        transform: translate(-55%, -57%) rotate(-10deg);
+      }
+    }
+    &__text {
+      padding-top: 6rem;
+      font-weight: bold;
+      font-size: 2.2rem;
+      font-family: $vazir-regular;
+    }
+
+    > a {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+  }
+}
+@include respond(tab-port) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .card-box {
+    width: 65%;
+  }
+}
+@include respond(phone) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .card-box {
+    // height: 80rem;
+    width: 65%;
+    // background-color: black;
+    flex-direction: column;
+    &__card {
+      margin: 2.5rem 0 2.5rem 0;
+      width: 100%;
+      height: 27rem;
+      &__spawn {
+        display: none;
+      }
+      &__img {
+        width: 13rem;
+        height: 15rem;
+      }
+      &:first-child {
+        margin: 2.5rem 0 0 0;
+      }
+      &__text {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.about-hamsaye {
+  margin-top: 6rem;
+  height: 80vh;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 5rem 0 5rem;
+}
+.text-box__head {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+.text-box__head2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.text-box__text {
+  padding-top: 2rem;
+  font-size: 1.7rem;
+}/*# sourceMappingURL=about-hamsaye.css.map */

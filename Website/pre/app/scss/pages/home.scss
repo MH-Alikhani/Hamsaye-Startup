@@ -1,0 +1,91 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  // Text in home
+  &-title {
+    text-align: right;
+    > span {
+      &:first-child {
+        font: {
+          size: 128px;
+          weight: bold;
+        }
+      }
+      &:last-child {
+        font-size: 32px;
+      }
+    }
+  }
+
+  //home square behind pic
+  > .home-banner {
+    position: relative;
+    .banner-square {
+      background-color: $color-primary;
+      width: 32rem;
+      height: 45rem;
+      transform: rotate(15deg) translate(-50%, -50%);
+      position: absolute;
+      left: 35%;
+      top: 58%;
+      z-index: -1;
+    }
+    // Home banner
+    > .banner {
+      display: flex;
+      width: 35rem;
+      height: 45rem;
+      border-radius: 10px;
+      background-size: 100% 100%;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+      background: url("/assets/images/home-banner.png");
+
+      // 3 boxes of home banner
+      > div {
+        height: 100%;
+        width: calc(100% / 3);
+        overflow: hidden;
+
+        border: 10px solid rgba(224, 213, 204, 0.95);
+
+        &:first-child {
+          border-radius: 0 10px 10px 0;
+        }
+        &:last-child {
+          border-radius: 10px 0 0 10px;
+        }
+      }
+    }
+  }
+}
+
+@include respond(tab-port) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .home {
+  }
+  .home-banner {
+    display: none;
+  }
+  .home {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-body, 0.8),
+        rgba($color-primary, 0.8)
+      ),
+      url("/assets/images/home-banner.png");
+    background-size: cover;
+
+    &-title {
+      text-align: center;
+    }
+  }
+}
