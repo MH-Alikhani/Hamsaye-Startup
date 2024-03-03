@@ -1,4 +1,5 @@
 .about-hamsaye {
+  font-family: "Vazir", sans-serif;
   margin-top: 6rem;
   height: 80vh;
 }
@@ -20,5 +21,15 @@
 }
 .text-box__text {
   padding-top: 2rem;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 56.25em) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .text-box__text {
+    font-size: 2.1rem;
+  }
 }/*# sourceMappingURL=about-hamsaye.css.map */

@@ -18,7 +18,7 @@ html {
     font-size: 50%;
   }
 
-  @o @include respond(big-desktop) {
+  @include respond(big-desktop) {
     font-size: 75%;
   }
 }

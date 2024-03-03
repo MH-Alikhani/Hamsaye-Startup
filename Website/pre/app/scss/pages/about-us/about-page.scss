@@ -85,6 +85,12 @@
   }
   .card-box {
     width: 65%;
+    &__card {
+      &:hover {
+        box-shadow: none;
+        transform: none;
+      }
+    }
   }
 }
 @include respond(phone) {
@@ -93,14 +99,14 @@
     flex-direction: column-reverse;
   }
   .card-box {
-    // height: 80rem;
+    height: 80%;
     width: 65%;
     // background-color: black;
     flex-direction: column;
     &__card {
       margin: 2.5rem 0 2.5rem 0;
       width: 100%;
-      height: 27rem;
+
       &__spawn {
         display: none;
       }

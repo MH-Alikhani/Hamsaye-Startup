@@ -6,24 +6,17 @@
 .member-section .card-holder {
   height: 50%;
 }
-.member-section .card-holder .holder {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.member-section .card-holder .holder > .card {
-  margin: 0;
-}
 .member-section .card-holder .card-header {
-  border-top: 3px solid #e0d5cc;
+  border-top: 2px solid #e0d5cc;
   border-bottom: 3px solid #e0d5cc;
   height: 15%;
+  padding-top: 1rem;
   font-size: 2rem;
   text-align: center;
 }
 .member-section .card-holder .card {
-  border: 2px solid #e0d5cc;
+  border-left: 2px solid #e0d5cc;
+  border-right: 2px solid #e0d5cc;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,17 +26,35 @@
   height: 85%;
 }
 .member-section .card-holder .card__img {
-  width: 20rem;
+  width: 21rem;
 }
 .member-section .card-holder .card__text-holder {
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.member-section .card-holder .card__text-holder :last-child {
+  padding-top: 1rem;
+  color: #652a3c;
+  font-weight: bold;
+}
 .member-section .card-holder .card__text-holder .text {
   font-size: 2rem;
   text-align: center;
+}
+.member-section .card-holder .holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+}
+.member-section .card-holder .holder > .card {
+  margin: 0;
+  width: 23rem;
+  height: 100%;
 }
 
 @media (max-width: 56.25em) {

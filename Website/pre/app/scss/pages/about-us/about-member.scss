@@ -8,27 +8,18 @@
   .card-holder {
     height: 50%;
 
-    .holder {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-
-      > .card {
-        margin: 0;
-      }
-    }
     .card-header {
-      border-top: 3px solid $color-primary;
+      border-top: 2px solid $color-primary;
       border-bottom: 3px solid $color-primary;
 
       height: 15%;
-
+      padding-top: 1rem;
       font-size: 2rem;
       text-align: center;
     }
     .card {
-      border: 2px solid $color-primary;
+      border-left: 2px solid $color-primary;
+      border-right: 2px solid $color-primary;
 
       display: flex;
       flex-direction: column;
@@ -40,18 +31,37 @@
       height: 85%;
 
       &__img {
-        width: 20rem;
+        width: 21rem;
       }
       &__text-holder {
+        padding-bottom: 4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        :last-child {
+          padding-top: 1rem;
+          color: #652a3c;
+          font-weight: bold;
+        }
 
         .text {
           font-size: 2rem;
           text-align: center;
         }
+      }
+    }
+    .holder {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 85%;
+      > .card {
+        margin: 0;
+
+        width: 23rem;
+        height: 100%;
       }
     }
   }

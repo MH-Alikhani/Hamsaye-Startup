@@ -1,4 +1,8 @@
+@import "../../base/variables";
+@import "../../base/mixins";
+
 .about-hamsaye {
+  font-family: $vazir-regular;
   margin-top: 6rem;
   height: 80vh;
 }
@@ -22,6 +26,18 @@
   }
   &__text {
     padding-top: 2rem;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+  }
+}
+
+@include respond(tab-port) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .text-box {
+    &__text {
+      font-size: 2.1rem;
+    }
   }
 }
