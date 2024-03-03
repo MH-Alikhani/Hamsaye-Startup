@@ -26,6 +26,8 @@
     }
 
     &__text-box {
+      display: flex;
+      flex-direction: column;
       width: 40rem;
       text-align: center;
       font-weight: bold;

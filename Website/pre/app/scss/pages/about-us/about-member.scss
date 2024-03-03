@@ -59,18 +59,8 @@
       height: 85%;
       > .card {
         margin: 0;
-
         width: 23rem;
         height: 100%;
-      }
-    }
-  }
-}
-
-@include respond(phone) {
-  .member-section {
-    .card-holder {
-      .card {
       }
     }
   }
@@ -82,9 +72,36 @@
     flex-direction: column-reverse;
   }
   .member-section {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-body, 0.8),
+        rgba($color-primary, 0.8)
+      ),
+      url("/assets/images/wallpaper/12.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     .card-holder {
       .card-header {
-        padding-top: 2rem;
+        padding-top: 2.3rem;
+        border-top: 2px solid $color-text-gold;
+        border-bottom: 3px solid $color-text-gold;
+      }
+      .card {
+        border-left: 2px solid $color-text-gold;
+        border-right: 2px solid $color-text-gold;
+      }
+    }
+  }
+}
+@include respond(phone) {
+  .member-section {
+    .card-holder {
+      .holder {
+        > .card {
+          margin: 0;
+          width: 20rem;
+        }
       }
     }
   }

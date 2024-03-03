@@ -34,7 +34,7 @@
   margin-left: 4.4rem;
 }
 .card-box__card__img {
-  z-index: 4;
+  z-index: 2;
   width: 20.2rem;
   height: 29.3rem;
 }
@@ -42,7 +42,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 19.5rem;
+  overflow: hidden;
+  width: 20rem;
   height: 31.3rem;
   border-radius: 1rem;
   border: #e0d5cc;
@@ -85,6 +86,12 @@
   body {
     display: flex;
     flex-direction: column-reverse;
+  }
+  .about-page {
+    background-image: linear-gradient(to right bottom, rgba(247, 244, 242, 0.8), rgba(224, 213, 204, 0.8)), url("/assets/images/wallpaper/5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .card-box {
     height: 80%;

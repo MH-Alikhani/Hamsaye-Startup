@@ -25,6 +25,7 @@
     font-weight: bold;
   }
   &__text {
+    text-align: justify;
     padding-top: 2rem;
     font-size: 1.8rem;
   }
@@ -35,9 +36,31 @@
     display: flex;
     flex-direction: column-reverse;
   }
+  .about-hamsaye {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-body, 0.8),
+        rgba($color-primary, 0.8)
+      ),
+      url("/assets/images/wallpaper/5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   .text-box {
     &__text {
       font-size: 2.1rem;
+    }
+  }
+}
+
+@include respond(big-desktop) {
+  .text-box {
+    &__head {
+      font-size: 2.7rem;
+    }
+    &__text {
+      font-size: 2.3rem;
     }
   }
 }
