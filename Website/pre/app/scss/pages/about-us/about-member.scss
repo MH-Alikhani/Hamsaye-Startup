@@ -14,25 +14,25 @@
 
     // Title of the card
     .card-header {
+      height: 15%;
+      font-size: 2rem;
+      padding-top: 1rem;
+      text-align: center;
       border-top: 2px solid $color-primary;
       border-bottom: 3px solid $color-primary;
-      height: 15%;
-      padding-top: 1rem;
-      font-size: 2rem;
-      text-align: center;
     }
 
     // Styling for the card
     .card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 85%;
+      width: 23rem;
+      margin: 0 auto;
       border-left: 2px solid $color-primary;
       border-right: 2px solid $color-primary;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      width: 23rem;
-      height: 85%;
 
       // Developer picture
       &__img {
@@ -41,11 +41,11 @@
 
       // Text holder for employee name and position
       &__text-holder {
-        padding-bottom: 4rem;
         display: flex;
+        align-items: center;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        padding-bottom: 5rem;
 
         // Styling for employee position
         :last-child {

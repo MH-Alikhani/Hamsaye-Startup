@@ -12,6 +12,8 @@ html {
   direction: rtl;
   font-size: 62.5%; // Equivalent to 10px (1rem = 10px)
 
+  font-family: $vazir-regular;
+
   @include respond(tab-land) {
     font-size: 56.25%; // Equivalent to 9px
   }
@@ -27,15 +29,14 @@ html {
 
 // Global styles for the body
 body {
-  height: 100vh; // Set body height to viewport height
-  overflow: hidden; // Hide any overflowing content
-  font-family: $vazir-regular; // Use Vazir font
-  background-color: $color-body; // Set background color
+  height: 100vh;
+  overflow: hidden;
+  background-color: $color-body;
 }
 
 // Header styling
 header {
-  height: 10vh; // Set header height to 10% of viewport height
+  height: 10vh;
 }
 
 // Main content styling

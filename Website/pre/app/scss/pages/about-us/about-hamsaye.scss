@@ -1,24 +1,28 @@
 @import "../../base/variables";
 @import "../../base/mixins";
 
+body {
+  overflow-y: auto;
+}
+
 .about-hamsaye {
-  font-family: $vazir-regular;
-  margin-top: 6rem;
   height: 80vh;
+  padding: 8rem 0;
+  font-family: $vazir-regular;
 }
 
 .subjects {
+  direction: rtl;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   padding: 0rem 5rem 0 5rem;
 
   &__head {
-    animation: text-shadow-slide 2s;
     font-size: 3rem;
     font-weight: bold;
+    animation: text-shadow-slide 2s;
   }
 
   &__head2 {
@@ -33,32 +37,45 @@
     font-weight: bold;
   }
   &__text {
-    text-align: justify;
     padding: 1.5rem 0;
     font-size: 1.6rem;
+    text-align: justify;
   }
 }
 
 @include respond(tab-port) {
   body {
+    height: auto;
     display: flex;
     flex-direction: column-reverse;
-  }
-  .about-hamsaye {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-body, 0.8),
         rgba($color-primary, 0.8)
       ),
       url("/assets/images/wallpaper/5.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+  }
+  .about-hamsaye {
+    height: auto;
+    padding: 3rem 0;
+    > .subjects {
+      &:nth-child(1) {
+      }
+    }
   }
   .text-box {
     &__text {
       font-size: 2.1rem;
     }
+  }
+
+  .header {
+    position: sticky;
+    bottom: 0;
+    left: 0;
   }
 }
 

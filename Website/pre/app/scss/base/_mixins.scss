@@ -20,3 +20,11 @@
     }
   }
 }
+
+@mixin setAnimation($breakpoint) {
+  @if $breakpoint == phone {
+    @media (min-width: 37.6em) {
+      @content;
+    }
+  }
+}

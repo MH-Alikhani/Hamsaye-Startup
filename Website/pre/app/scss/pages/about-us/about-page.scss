@@ -1,7 +1,7 @@
 @import "../../base/variables";
 @import "../../base/mixins";
 @import "../../base/animation";
-// Styles for the .about-page section
+
 .about-page {
   display: flex;
   align-items: center;
@@ -9,46 +9,44 @@
   justify-content: space-evenly;
 }
 
-// Styles for the .card-box section
+// box of the card
 .card-box {
   position: relative;
-  margin: 2rem 0;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0;
 
-  // Styles for the .card-box__card section
+  // card
   &__card {
-    transition: all 0.5s;
     position: relative;
-    border: 1.4px solid $color-gold-2;
     border-radius: 1rem;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: $color-white;
+    justify-content: flex-end;
     position: relative;
     width: 32.6rem;
     height: 47.1rem;
+    border: 1.4px solid $color-gold-2;
+    background-color: $color-white;
+    transition: all 0.5s;
     animation: parallax 2s;
+
+    //hover effect
     &:hover {
       transform: scale(1.01);
       box-shadow: 0 1.5rem 2rem $color-gold-2;
     }
 
+    //space between two card
     &:first-child {
       margin-left: 4.4rem;
     }
-
-    // Styles for the .card-box__card__img section
     &__img {
-      z-index: 2;
-      width: 20.2rem;
-      height: 29.3rem;
+      display: none;
     }
-
-    // Styles for the .card-box__card__spawn section
+    //box of the img
     &__spawn {
       position: absolute;
       top: 50%;
@@ -59,23 +57,36 @@
       border-radius: 1rem;
       border: $color-primary;
       background-color: $color-primary;
-
       &-1 {
         transform: translate(-45%, -57%) rotate(10deg);
+        &__img {
+          transform: rotate(-10deg);
+        }
       }
       &-2 {
         transform: translate(-55%, -57%) rotate(-10deg);
+        &__img {
+          transform: rotate(10deg);
+        }
+      }
+
+      //styling img in side of the box
+      &__img {
+        z-index: 2;
+        width: 20.2rem;
+        height: 29.3rem;
       }
     }
 
     // Styles for the .card-box__card__text section
     &__text {
-      padding-top: 6rem;
+      padding-bottom: 3.5rem;
       font-weight: bold;
       font-size: 2.2rem;
       font-family: $vazir-regular;
     }
 
+    //putting a and cover the hole card
     > a {
       position: absolute;
       display: block;
@@ -118,8 +129,11 @@
       rgba($color-body, 0.8),
       rgba($color-primary, 0.8)
     );
-    // Add any additional responsive styles for phone screens here
   }
+}
+
+//Responsive styles for big desktop
+@include respond(big-desktop) {
 }
 // Responsive styles for tablet portrait screens
 @include respond(tab-port) {
@@ -132,6 +146,12 @@
     width: 65%;
 
     &__card {
+      &__img {
+        display: none;
+        z-index: 2;
+        width: 20.2rem;
+        height: 29.3rem;
+      }
       &:hover {
         box-shadow: none;
         transform: none;
@@ -172,10 +192,10 @@
       &__spawn {
         display: none;
       }
-
       &__img {
-        width: 13rem;
-        height: 15rem;
+        display: block;
+        width: 16rem;
+        height: 20rem;
       }
 
       &:first-child {
@@ -183,7 +203,7 @@
       }
 
       &__text {
-        padding: 0;
+        padding: 2rem;
       }
     }
   }
