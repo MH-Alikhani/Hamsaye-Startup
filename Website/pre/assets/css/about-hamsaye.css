@@ -4,26 +4,33 @@
   height: 80vh;
 }
 
-.text-box {
+.subjects {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 2rem 5rem 0 5rem;
+  padding: 0rem 5rem 0 5rem;
 }
-.text-box__head {
+.subjects__head {
   animation: text-shadow-slide 2s;
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
-.text-box__head2 {
-  font-size: 2.2rem;
+.subjects__head2 {
+  font-size: 2rem;
   font-weight: bold;
 }
-.text-box__text {
+.subjects__head2:first-child {
+  padding-bottom: 1rem;
+}
+.subjects__head3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.subjects__text {
   text-align: justify;
-  padding-top: 2rem;
-  font-size: 1.8rem;
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
 }
 
 @media (max-width: 56.25em) {
@@ -42,10 +49,10 @@
   }
 }
 @media (min-width: 112.5em) {
-  .text-box__head {
-    font-size: 2.7rem;
+  .subjects__head {
+    font-size: 2.2rem;
   }
-  .text-box__text {
-    font-size: 2.3rem;
+  .subjects__text {
+    font-size: 1.8rem;
   }
 }/*# sourceMappingURL=about-hamsaye.css.map */
