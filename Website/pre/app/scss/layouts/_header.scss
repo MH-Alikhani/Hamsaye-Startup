@@ -1,11 +1,13 @@
+// Define styles for the header section
 .header {
   font-size: 2.5rem;
   font-weight: bold;
-  padding: 3rem 0;
+  padding: 1.5rem 0;
   width: 100%;
   font-family: $vazir-bold;
 }
 
+// Define styles for the navigation section
 .navigation {
   display: flex;
   align-items: center;
@@ -22,7 +24,7 @@
       border-bottom: 3px solid $color-gold;
     }
 
-    // header logo
+    // Define styles for the header logo within navigation links
     > img {
       width: 6.4rem;
       margin: 0 4.5rem;
@@ -30,10 +32,20 @@
   }
 }
 
+// Responsive styles for smaller screens (tablet portrait and phone)
 @include respond(tab-port) {
   .header {
     height: auto;
     background-color: $color-primary;
     font-size: 2.5rem;
+  }
+
+  //no hover in mobile and tablet
+  .navigation {
+    > a {
+      &:hover:not(:nth-child(2)) {
+        border-bottom: 0;
+      }
+    }
   }
 }

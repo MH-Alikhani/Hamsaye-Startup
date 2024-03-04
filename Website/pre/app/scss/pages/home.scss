@@ -1,6 +1,8 @@
 @import "../base/variables";
 @import "../base/mixins";
+@import "../base/animation";
 
+// Styles for the .home section
 .home {
   display: flex;
   align-items: center;
@@ -9,6 +11,7 @@
   // Text in home
   &-title {
     text-align: right;
+    animation: moveInRight 2.5s;
     > span {
       &:first-child {
         font: {
@@ -22,9 +25,11 @@
     }
   }
 
-  //home square behind pic
+  // Home square behind the picture
   > .home-banner {
     position: relative;
+
+    // Styles for the .banner-square section
     .banner-square {
       background-color: $color-primary;
       width: 32rem;
@@ -34,7 +39,9 @@
       left: 35%;
       top: 58%;
       z-index: -1;
+      animation: rotation 2.5s;
     }
+
     // Home banner
     > .banner {
       display: flex;
@@ -43,15 +50,13 @@
       border-radius: 10px;
       background-size: 100% 100%;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-
       background: url("/assets/images/home-banner.png");
 
-      // 3 boxes of home banner
+      // Three boxes of home banner
       > div {
         height: 100%;
         width: calc(100% / 3);
         overflow: hidden;
-
         border: 10px solid rgba(224, 213, 204, 0.95);
 
         &:first-child {
@@ -65,16 +70,17 @@
   }
 }
 
+// Responsive styles for tablet portrait screens
 @include respond(tab-port) {
   body {
     display: flex;
     flex-direction: column-reverse;
   }
-  .home {
-  }
+
   .home-banner {
     display: none;
   }
+
   .home {
     background-image: linear-gradient(
         to right bottom,

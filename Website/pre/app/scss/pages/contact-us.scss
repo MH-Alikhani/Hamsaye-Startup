@@ -1,30 +1,34 @@
 @import "../base/variables";
 @import "../base/mixins";
+@import "../base/animation";
 
+// Styles for the .contact-us section
 .contact-us {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   background-image: url("/assets/images/circles.png");
   background-repeat: no-repeat;
   background-size: cover;
 
+  // Styles for the .mail-box section
   .mail-box {
     width: 100%;
     height: 10rem;
     padding-left: 60rem;
     // background-color: #fff;
-
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
+    // Styles for the .mail-box__img section
     &__img {
+      animation: moveInRight 1.4s ease-out;
       width: 10rem;
     }
 
+    // Styles for the .mail-box__text-box section
     &__text-box {
       display: flex;
       flex-direction: column;
@@ -32,7 +36,9 @@
       text-align: center;
       font-weight: bold;
       font-family: $vazir-regular;
+      animation: InvisibleMagic 4s;
 
+      // Styles for the .mail-box__text-box__head section
       &__head {
         font-size: 4rem;
         transition: all 0.5s;
@@ -41,6 +47,7 @@
         }
       }
 
+      // Styles for the .mail-box__text-box__link section
       &__link {
         font-size: 1.6rem;
         color: $color-text-gold;
@@ -49,18 +56,26 @@
     }
   }
 
+  // Styles for the .mail-box-2 section
   .mail-box-2 {
     margin-top: 10rem;
+
+    // Styles for the .mail-box-2__img section
     &__img {
+      animation: moveInRight 1.4s ease-out;
       width: 10rem;
     }
   }
 }
+
+// Responsive styles for phone screens
 @include respond(phone) {
   .mail-box {
     padding-right: 45%;
   }
 }
+
+// Responsive styles for tablet portrait screens
 @include respond(tab-port) {
   body {
     display: flex;
@@ -72,17 +87,19 @@
       padding: 0;
       flex-direction: column;
 
-      &__text-box {
-        &__head {
+      .mail-box__text-box {
+        .mail-box__text-box__head {
           font-size: 3rem;
         }
       }
-      &__img {
+
+      .mail-box__img {
         width: 6rem;
       }
     }
+
     .mail-box-2 {
-      &__img {
+      .mail-box-2__img {
         width: 6rem;
       }
     }

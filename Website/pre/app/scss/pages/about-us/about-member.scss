@@ -1,44 +1,53 @@
+// Import base variables and mixins
 @import "../../base/variables";
 @import "../../base/mixins";
 
+// Main page layout
 .member-section {
   height: 90vh;
   margin-top: 3rem;
   font-family: $vazir-regular;
+
+  // Create two holders for cards
   .card-holder {
     height: 50%;
 
+    // Title of the card
     .card-header {
       border-top: 2px solid $color-primary;
       border-bottom: 3px solid $color-primary;
-
       height: 15%;
       padding-top: 1rem;
       font-size: 2rem;
       text-align: center;
     }
+
+    // Styling for the card
     .card {
       border-left: 2px solid $color-primary;
       border-right: 2px solid $color-primary;
-
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-
       width: 23rem;
       height: 85%;
 
+      // Developer picture
       &__img {
         width: 21rem;
       }
+
+      // Text holder for employee name and position
       &__text-holder {
         padding-bottom: 4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        // Styling for employee position
         :last-child {
           padding-top: 1rem;
           color: #652a3c;
@@ -51,12 +60,15 @@
         }
       }
     }
+
+    // Holder for two floors of cards
     .holder {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       height: 85%;
+
       > .card {
         margin: 0;
         width: 23rem;
@@ -65,28 +77,33 @@
     }
   }
 }
-
+// Apply responsive styling for tablet and mobile devices
 @include respond(tab-port) {
   body {
+    // Bring the header to the footer for tablet and mobile devices
     display: flex;
     flex-direction: column-reverse;
   }
+
   .member-section {
+    // Apply a cool background for mobile and tablet devices
     background-image: linear-gradient(
         to right bottom,
         rgba($color-body, 0.8),
         rgba($color-primary, 0.8)
       ),
-      url("/assets/images/wallpaper/12.jpg");
+      url("/assets/images/wallpaper/5.jpg"); // Add your image URL here
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     .card-holder {
       .card-header {
         padding-top: 2.3rem;
         border-top: 2px solid $color-text-gold;
         border-bottom: 3px solid $color-text-gold;
       }
+
       .card {
         border-left: 2px solid $color-text-gold;
         border-right: 2px solid $color-text-gold;
@@ -94,13 +111,14 @@
     }
   }
 }
+
 @include respond(phone) {
   .member-section {
     .card-holder {
       .holder {
         > .card {
           margin: 0;
-          width: 20rem;
+          width: 17.9rem;
         }
       }
     }

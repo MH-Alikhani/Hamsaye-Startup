@@ -1,3 +1,4 @@
+// Reset default margin, padding, and box-sizing for all elements
 *,
 *::after,
 *::before {
@@ -6,38 +7,44 @@
   box-sizing: border-box;
 }
 
+// Set base font size and direction for the entire document
 html {
   direction: rtl;
-  font-size: 62.5%;
+  font-size: 62.5%; // Equivalent to 10px (1rem = 10px)
 
   @include respond(tab-land) {
-    font-size: 56.25%;
+    font-size: 56.25%; // Equivalent to 9px
   }
 
   @include respond(tab-port) {
-    font-size: 52%;
+    font-size: 52%; // Equivalent to 8.32px
   }
 
   @include respond(big-desktop) {
-    font-size: 80%;
+    font-size: 80%; // Equivalent to 12.8px
   }
 }
 
+// Global styles for the body
 body {
-  height: 100vh;
-  overflow: hidden;
-  font-family: $vazir-regular;
-  background-color: $color-body;
+  height: 100vh; // Set body height to viewport height
+  overflow: hidden; // Hide any overflowing content
+  font-family: $vazir-regular; // Use Vazir font
+  background-color: $color-body; // Set background color
 }
 
+// Header styling
 header {
-  height: 10vh;
-}
-main {
-  height: 90vh;
+  height: 10vh; // Set header height to 10% of viewport height
 }
 
+// Main content styling
+main {
+  height: 90vh; // Set main content height to 90% of viewport height
+}
+
+// Global link styling
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit; // Inherit text color from parent
+  text-decoration: none; // Remove default underline
 }

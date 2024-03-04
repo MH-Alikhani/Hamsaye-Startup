@@ -82,10 +82,89 @@ a {
   text-decoration: none;
 }
 
+/*animation*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  80% {
+    transform: translateX(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    opacity: 0.5;
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(15deg) translate(-50%, -50%);
+  }
+}
+@keyframes InvisibleMagic {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes parallax {
+  0% {
+    box-shadow: 0 20px 40px #b9a08d;
+  }
+  100% {
+    box-shadow: 0 0 0px #b9a08d;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #b9a08d;
+  }
+  100% {
+    box-shadow: 0 0 20px #b9a08d;
+  }
+}
+@keyframes text-shadow-slide {
+  0% {
+    text-shadow: 4px 4px 8px #b9a08d;
+  }
+  100% {
+    text-shadow: 1px 1px 2px #b9a08d;
+  }
+}
 .header {
   font-size: 2.5rem;
   font-weight: bold;
-  padding: 3rem 0;
+  padding: 1.5rem 0;
   width: 100%;
   font-family: "Vazir Bold", sans-serif;
 }
@@ -115,5 +194,8 @@ a {
     height: auto;
     background-color: #e0d5cc;
     font-size: 2.5rem;
+  }
+  .navigation > a:hover:not(:nth-child(2)) {
+    border-bottom: 0;
   }
 }/*# sourceMappingURL=main.css.map */

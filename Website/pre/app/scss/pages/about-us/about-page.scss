@@ -1,12 +1,15 @@
 @import "../../base/variables";
 @import "../../base/mixins";
-
+@import "../../base/animation";
+// Styles for the .about-page section
 .about-page {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+// Styles for the .card-box section
 .card-box {
   position: relative;
   margin: 2rem 0;
@@ -14,6 +17,7 @@
   justify-content: space-evenly;
   align-items: center;
 
+  // Styles for the .card-box__card section
   &__card {
     transition: all 0.5s;
     position: relative;
@@ -22,33 +26,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     flex-direction: column;
     background-color: $color-white;
     position: relative;
-
     width: 32.6rem;
     height: 47.1rem;
-
+    animation: parallax 2s;
     &:hover {
       transform: scale(1.01);
       box-shadow: 0 1.5rem 2rem $color-gold-2;
     }
+
     &:first-child {
       margin-left: 4.4rem;
     }
 
+    // Styles for the .card-box__card__img section
     &__img {
       z-index: 2;
       width: 20.2rem;
       height: 29.3rem;
     }
 
+    // Styles for the .card-box__card__spawn section
     &__spawn {
       position: absolute;
       top: 50%;
       left: 50%;
-
       overflow: hidden;
       width: 20rem;
       height: 31.3rem;
@@ -63,6 +67,8 @@
         transform: translate(-55%, -57%) rotate(-10deg);
       }
     }
+
+    // Styles for the .card-box__card__text section
     &__text {
       padding-top: 6rem;
       font-weight: bold;
@@ -79,13 +85,17 @@
     }
   }
 }
+
+// Responsive styles for smaller screens (tablet portrait)
 @include respond(tab-port) {
   body {
     display: flex;
     flex-direction: column-reverse;
   }
+
   .card-box {
     width: 65%;
+
     &__card {
       &:hover {
         box-shadow: none;
@@ -94,11 +104,49 @@
     }
   }
 }
+
+// Responsive styles for phone screens
 @include respond(phone) {
   body {
     display: flex;
     flex-direction: column-reverse;
   }
+
+  .about-page {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-body, 0.8),
+      rgba($color-primary, 0.8)
+    );
+    // Add any additional responsive styles for phone screens here
+  }
+}
+// Responsive styles for tablet portrait screens
+@include respond(tab-port) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .card-box {
+    width: 65%;
+
+    &__card {
+      &:hover {
+        box-shadow: none;
+        transform: none;
+      }
+    }
+  }
+}
+
+// Responsive styles for phone screens
+@include respond(phone) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .about-page {
     background-image: linear-gradient(
         to right bottom,
@@ -110,11 +158,13 @@
     background-size: cover;
     background-position: center;
   }
+
   .card-box {
     height: 80%;
     width: 65%;
     // background-color: black;
     flex-direction: column;
+
     &__card {
       margin: 2.5rem 0 2.5rem 0;
       width: 100%;
@@ -122,13 +172,16 @@
       &__spawn {
         display: none;
       }
+
       &__img {
         width: 13rem;
         height: 15rem;
       }
+
       &:first-child {
         margin: 2.5rem 0 0 0;
       }
+
       &__text {
         padding: 0;
       }

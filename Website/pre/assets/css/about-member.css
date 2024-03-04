@@ -63,7 +63,7 @@
     flex-direction: column-reverse;
   }
   .member-section {
-    background-image: linear-gradient(to right bottom, rgba(247, 244, 242, 0.8), rgba(224, 213, 204, 0.8)), url("/assets/images/wallpaper/12.jpg");
+    background-image: linear-gradient(to right bottom, rgba(247, 244, 242, 0.8), rgba(224, 213, 204, 0.8)), url("/assets/images/wallpaper/5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -81,6 +81,6 @@
 @media (max-width: 37.5em) {
   .member-section .card-holder .holder > .card {
     margin: 0;
-    width: 20rem;
+    width: 17.9rem;
   }
 }/*# sourceMappingURL=about-member.css.map */

@@ -12,6 +12,7 @@
   padding: 2rem 5rem 0 5rem;
 }
 .text-box__head {
+  animation: text-shadow-slide 2s;
   font-size: 3.2rem;
   font-weight: bold;
 }
