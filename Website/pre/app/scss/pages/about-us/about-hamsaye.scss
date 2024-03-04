@@ -46,6 +46,8 @@ body {
 @include respond(tab-port) {
   body {
     height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
     background-image: linear-gradient(

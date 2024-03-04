@@ -14,12 +14,12 @@
     > span {
       &:first-child {
         font: {
-          size: 128px;
+          size: 12rem;
           weight: bold;
         }
       }
       &:last-child {
-        font-size: 32px;
+        font-size: 3.2rem;
       }
     }
   }
@@ -47,7 +47,7 @@
       height: 45rem;
       border-radius: 10px;
       background-size: 100% 100%;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
       background: url("/assets/images/home-banner.png");
 
       // Three boxes of home banner
@@ -55,13 +55,21 @@
         height: 100%;
         width: calc(100% / 3);
         overflow: hidden;
-        border: 10px solid rgba(224, 213, 204, 0.95);
+        border: 1rem solid rgba(224, 213, 204, 0.95);
 
         &:first-child {
-          border-radius: 0 10px 10px 0;
+          border-radius: 0 1rem 1rem 0;
+          -webkit-border-radius: 0 1rem 1rem 0;
+          -moz-border-radius: 0 1rem 1rem 0;
+          -ms-border-radius: 0 1rem 1rem 0;
+          -o-border-radius: 0 1rem 1rem 0;
         }
         &:last-child {
-          border-radius: 10px 0 0 10px;
+          border-radius: 1rem 0 0 1rem;
+          -webkit-border-radius: 1rem 0 0 1rem;
+          -moz-border-radius: 1rem 0 0 1rem;
+          -ms-border-radius: 1rem 0 0 1rem;
+          -o-border-radius: 1rem 0 0 1rem;
         }
       }
     }
@@ -82,6 +90,9 @@
 // Responsive styles for tablet portrait screens
 @include respond(tab-port) {
   body {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
   }

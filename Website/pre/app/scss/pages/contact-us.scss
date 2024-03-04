@@ -78,6 +78,9 @@
 // Responsive styles for tablet portrait screens
 @include respond(tab-port) {
   body {
+    height: auto;
+    overflow-y: auto;
+    // overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
   }

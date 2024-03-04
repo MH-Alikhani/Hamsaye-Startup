@@ -36,7 +36,12 @@
 
       // Developer picture
       &__img {
-        width: 21rem;
+        border-radius: 55%;
+        width: 50%;
+        -webkit-border-radius: 55%;
+        -moz-border-radius: 55%;
+        -ms-border-radius: 55%;
+        -o-border-radius: 55%;
       }
 
       // Text holder for employee name and position
@@ -45,7 +50,8 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        padding-bottom: 5rem;
+
+        padding: 2rem 0;
 
         // Styling for employee position
         :last-child {
@@ -55,7 +61,7 @@
         }
 
         .text {
-          font-size: 2rem;
+          font-size: 1.7rem;
           text-align: center;
         }
       }
@@ -81,6 +87,9 @@
 @include respond(tab-port) {
   body {
     // Bring the header to the footer for tablet and mobile devices
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
   }
