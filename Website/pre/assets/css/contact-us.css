@@ -79,14 +79,14 @@
 }
 .contact-us {
   display: flex;
+  height: 87vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url("/assets/images/circles.png");
-  background-repeat: no-repeat;
   background-size: cover;
 }
-.contact-us .mail-box {
+.contact-us > section {
   width: 100%;
   height: 10rem;
   padding-left: 60rem;
@@ -94,11 +94,11 @@
   align-items: center;
   justify-content: space-evenly;
 }
-.contact-us .mail-box__img {
+.contact-us > section > img {
   animation: moveInRight 1.4s ease-out;
   width: 10rem;
 }
-.contact-us .mail-box__text-box {
+.contact-us > section > h2 {
   display: flex;
   flex-direction: column;
   width: 40rem;
@@ -107,49 +107,47 @@
   font-family: "Vazir", sans-serif;
   animation: InvisibleMagic 4s;
 }
-.contact-us .mail-box__text-box__head {
+.contact-us > section > h2 > a:first-child {
   font-size: 4rem;
   transition: all 0.5s;
 }
-.contact-us .mail-box__text-box__head:hover {
+.contact-us > section > h2 > a:first-child:hover {
   color: #98765d;
 }
-.contact-us .mail-box__text-box__link {
+.contact-us > section > h2 > a:last-child {
   font-size: 1.6rem;
   color: #98765d;
   opacity: 1;
 }
-.contact-us .mail-box-2 {
+.contact-us section:last-child {
   margin-top: 10rem;
 }
-.contact-us .mail-box-2__img {
+.contact-us section:last-child > img {
   animation: moveInRight 1.4s ease-out;
   width: 10rem;
 }
 
 @media (max-width: 37.5em) {
-  .mail-box {
+  .contact-us > section {
     padding-right: 45%;
   }
 }
 @media (max-width: 56.25em) {
   body {
-    height: auto;
-    overflow-y: auto;
     display: flex;
     flex-direction: column-reverse;
   }
-  .contact-us .mail-box {
+  .contact-us > section {
     padding: 0;
     flex-direction: column;
   }
-  .contact-us .mail-box .mail-box__text-box .mail-box__text-box__head {
+  .contact-us > section > h2 > a:first-child {
     font-size: 3rem;
   }
-  .contact-us .mail-box .mail-box__img {
+  .contact-us > section > img {
     width: 6rem;
   }
-  .contact-us .mail-box-2 .mail-box-2__img {
+  .contact-us > section:last-child > img {
     width: 6rem;
   }
 }/*# sourceMappingURL=contact-us.css.map */
