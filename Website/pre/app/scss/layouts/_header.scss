@@ -8,7 +8,7 @@
 }
 
 // Define styles for the navigation section
-.navigation {
+.header > nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,10 +24,9 @@
       border-bottom: 3px solid $color-gold;
     }
 
-    // Define styles for the header logo within navigation links
     > img {
       width: 6.4rem;
-      margin: 0 4.5rem;
+      margin: 0 5rem 0 4rem;
     }
   }
 }
@@ -37,14 +36,14 @@
   .header {
     height: auto;
     background-color: $color-primary;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   //no hover in mobile and tablet
-  .navigation {
+  .header > nav {
     > a {
-      &:hover:not(:nth-child(2)) {
-        border-bottom: 0;
+      > img {
+        width: 5rem;
       }
     }
   }
