@@ -3,59 +3,57 @@ body {
 }
 
 .about-hamsaye {
-  height: 80vh;
-  padding: 8rem 0;
-  font-family: "Vazir", sans-serif;
+  height: auto;
+  padding: 5rem 3rem 1rem 3rem;
 }
 
 .subjects {
-  direction: rtl;
+  margin-bottom: 3rem;
   display: flex;
+  text-align: justify;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  padding: 0rem 5rem 0 5rem;
 }
-.subjects__head {
-  font-size: 3rem;
+.subjects > h1 {
+  font-size: 2.5rem;
   font-weight: bold;
-  animation: text-shadow-slide 2s;
 }
-.subjects__head2 {
+.subjects > h2 {
   font-size: 2rem;
   font-weight: bold;
 }
-.subjects__head2:first-child {
+.subjects > h2:first-child {
   padding-bottom: 1rem;
 }
-.subjects__head3 {
-  font-size: 1.6rem;
-  font-weight: bold;
+.subjects ul > li {
+  list-style: none;
+  margin-bottom: 1rem;
 }
-.subjects__text {
-  padding: 1.5rem 0;
+.subjects ul > li > h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline;
+}
+.subjects ul > li > p {
+  display: inline;
+  font-size: 1.4rem;
+}
+.subjects > p {
+  margin-top: 1rem;
   font-size: 1.6rem;
-  text-align: justify;
 }
 
 @media (max-width: 56.25em) {
   body {
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
     background-image: linear-gradient(to right bottom, rgba(247, 244, 242, 0.8), rgba(224, 213, 204, 0.8)), url("/assets/images/wallpaper/5.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-  }
-  .about-hamsaye {
     height: auto;
-    padding: 3rem 0;
   }
-  .text-box__text {
-    font-size: 2.1rem;
+  body .about-hamsaye {
+    padding-top: 2rem;
   }
   .header {
     position: sticky;
@@ -63,11 +61,8 @@ body {
     left: 0;
   }
 }
-@media (min-width: 112.5em) {
-  .subjects__head {
-    font-size: 2.2rem;
-  }
-  .subjects__text {
-    font-size: 1.8rem;
+@media (max-width: 37.5em) {
+  .about-hamsaye > section > h1 {
+    text-align: center;
   }
 }/*# sourceMappingURL=about-hamsaye.css.map */

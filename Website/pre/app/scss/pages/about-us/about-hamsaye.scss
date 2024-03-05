@@ -6,48 +6,52 @@ body {
 }
 
 .about-hamsaye {
-  height: 80vh;
-  padding: 8rem 0;
-  font-family: $vazir-regular;
+  height: auto;
+  padding: 5rem 3rem 1rem 3rem;
 }
 
 .subjects {
-  direction: rtl;
+  margin-bottom: 3rem;
   display: flex;
+  text-align: justify;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  padding: 0rem 5rem 0 5rem;
 
-  &__head {
-    font-size: 3rem;
+  > h1 {
+    font-size: 2.5rem;
     font-weight: bold;
-    animation: text-shadow-slide 2s;
   }
 
-  &__head2 {
+  > h2 {
     font-size: 2rem;
     font-weight: bold;
     &:first-child {
       padding-bottom: 1rem;
     }
   }
-  &__head3 {
-    font-size: 1.6rem;
-    font-weight: bold;
+  ul > li {
+    list-style: none;
+    margin-bottom: 1rem;
+    > h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: inline;
+    }
+
+    > p {
+      display: inline;
+      font-size: 1.4rem;
+    }
   }
-  &__text {
-    padding: 1.5rem 0;
+
+  > p {
+    margin-top: 1rem;
     font-size: 1.6rem;
-    text-align: justify;
   }
 }
 
 @include respond(tab-port) {
   body {
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
     background-image: linear-gradient(
@@ -58,19 +62,9 @@ body {
       url("/assets/images/wallpaper/5.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-  }
-  .about-hamsaye {
     height: auto;
-    padding: 3rem 0;
-    > .subjects {
-      &:nth-child(1) {
-      }
-    }
-  }
-  .text-box {
-    &__text {
-      font-size: 2.1rem;
+    .about-hamsaye {
+      padding-top: 2rem;
     }
   }
 
@@ -81,13 +75,8 @@ body {
   }
 }
 
-@include respond(big-desktop) {
-  .subjects {
-    &__head {
-      font-size: 2.2rem;
-    }
-    &__text {
-      font-size: 1.8rem;
-    }
+@include respond(phone) {
+  .about-hamsaye > section > h1 {
+    text-align: center;
   }
 }
