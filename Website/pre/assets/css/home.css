@@ -81,6 +81,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 87vh;
 }
 .home-title {
   text-align: right;
@@ -97,8 +98,8 @@
 }
 .home > .home-banner .banner-square {
   background-color: #e0d5cc;
-  width: 32rem;
-  height: 45rem;
+  width: 30rem;
+  height: 38rem;
   transform: rotate(15deg) translate(-50%, -50%);
   position: absolute;
   left: 35%;
@@ -107,8 +108,8 @@
 }
 .home > .home-banner > .banner {
   display: flex;
-  width: 35rem;
-  height: 45rem;
+  width: 30rem;
+  height: 40rem;
   border-radius: 10px;
   background-size: 100% 100%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
@@ -145,9 +146,6 @@
 }
 @media (max-width: 56.25em) {
   body {
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -160,5 +158,14 @@
   }
   .home-title {
     text-align: center;
+  }
+}
+@media (max-width: 37.5em) {
+  .home-title > span:first-child {
+    font-size: 10rem;
+    font-weight: bold;
+  }
+  .home-title > span:last-child {
+    font-size: 3.2rem;
   }
 }/*# sourceMappingURL=home.css.map */

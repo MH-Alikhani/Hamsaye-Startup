@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 87vh;
 
   // Text in home
   &-title {
@@ -31,8 +32,8 @@
     // Styles for the .banner-square section
     .banner-square {
       background-color: $color-primary;
-      width: 32rem;
-      height: 45rem;
+      width: 30rem;
+      height: 38rem;
       transform: rotate(15deg) translate(-50%, -50%);
       position: absolute;
       left: 35%;
@@ -43,8 +44,8 @@
     // Home banner
     > .banner {
       display: flex;
-      width: 35rem;
-      height: 45rem;
+      width: 30rem;
+      height: 40rem;
       border-radius: 10px;
       background-size: 100% 100%;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
@@ -90,9 +91,6 @@
 // Responsive styles for tablet portrait screens
 @include respond(tab-port) {
   body {
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -112,6 +110,25 @@
 
     &-title {
       text-align: center;
+    }
+  }
+}
+
+@include respond(phone) {
+  .home {
+    // Text in home
+    &-title {
+      > span {
+        &:first-child {
+          font: {
+            size: 10rem;
+            weight: bold;
+          }
+        }
+        &:last-child {
+          font-size: 3.2rem;
+        }
+      }
     }
   }
 }
