@@ -37,6 +37,10 @@
     height: auto;
     background-color: $color-primary;
     font-size: 2rem;
+
+    position: sticky;
+    bottom: 0;
+    left: 0;
   }
 
   //no hover in mobile and tablet
@@ -47,4 +51,6 @@
       }
     }
   }
+
+  
 }
