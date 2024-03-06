@@ -1,213 +1,79 @@
 @import "../../base/variables";
-@import "../../base/mixins";
 @import "../../base/animation";
+@import "../../base/mixins";
+
+body {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-body, 0.8),
+      rgba($color-primary, 0.8)
+    ),
+    url("/assets/images/wallpaper/5.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 .about-page {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 0 10rem;
 
   height: 87vh;
-}
 
-// box of the card
-.card-box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 2rem 0;
-
-  // card
-  &__card {
+  > section {
     position: relative;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    width: 30rem;
-    height: 40rem;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
     border: 1.4px solid $color-gold-2;
-    background-color: $color-white;
-    transition: all 0.5s;
-    animation: parallax 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem 0 10rem 0;
 
-    //hover effect
-    &:hover {
-      transform: scale(1.01);
-      box-shadow: 0 1.5rem 2rem $color-gold-2;
-    }
+    background: rgb($color-body, 0.7);
 
-    //space between two card
-    &:first-child {
-      margin-left: 4.4rem;
-    }
-    &__img {
-      display: none;
-    }
-    //box of the img
-    &__spawn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      overflow: hidden;
-      width: 20rem;
-      height: 28rem;
-      border-radius: 10px;
-      border: $color-primary;
-      background-color: $color-primary;
-      &-1 {
-        transform: translate(-45%, -57%) rotate(10deg);
-        &__img {
-          transform: rotate(-10deg);
-        }
-      }
-      &-2 {
-        transform: translate(-55%, -57%) rotate(-10deg);
-        &__img {
-          transform: rotate(10deg);
-        }
-      }
-
-      //styling img in side of the box
-      &__img {
-        z-index: 2;
-        width: 20.2rem;
-        height: 29.3rem;
-      }
-    }
-
-    // Styles for the .card-box__card__text section
-    &__text {
-      padding-bottom: 3.5rem;
-      font-weight: bold;
-      font-size: 2.2rem;
-      font-family: $vazir-regular;
-    }
-
-    //putting a and cover the hole card
     > a {
-      position: absolute;
-      display: block;
       width: 100%;
       height: 100%;
-      z-index: 10;
+      display: block;
+      position: absolute;
+      z-index: 100;
+    }
+
+    > img {
+      width: 70%;
+      display: block;
+    }
+
+    > h2 {
+      font-size: 2.2rem;
     }
   }
-}
-
-// Responsive styles for smaller screens (tablet portrait)
-@include respond(tab-port) {
-  body {
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .card-box {
-    width: 65%;
-
-    &__card {
-      &:hover {
-        box-shadow: none;
-        transform: none;
-      }
-    }
+  section:last-child {
+    margin-right: 1rem;
   }
 }
 
-// Responsive styles for phone screens
-@include respond(phone) {
-  body {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .about-page {
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-body, 0.8),
-      rgba($color-primary, 0.8)
-    );
-  }
-}
-
-//Responsive styles for big desktop
-@include respond(big-desktop) {
-}
-// Responsive styles for tablet portrait screens
 @include respond(tab-port) {
   body {
     display: flex;
     flex-direction: column-reverse;
   }
-
-  .card-box {
-    width: 65%;
-
-    &__card {
-      &__img {
-        display: none;
-        z-index: 2;
-        width: 20.2rem;
-        height: 29.3rem;
-      }
-      &:hover {
-        box-shadow: none;
-        transform: none;
-      }
-    }
-  }
 }
 
-// Responsive styles for phone screens
 @include respond(phone) {
-  body {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
   .about-page {
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-body, 0.8),
-        rgba($color-primary, 0.8)
-      ),
-      url("/assets/images/wallpaper/5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .card-box {
-    height: 80%;
-    width: 65%;
-    // background-color: black;
     flex-direction: column;
-
-    &__card {
-      margin: 2.5rem 0 2.5rem 0;
+    > section {
+      height: 40%;
       width: 100%;
-
-      &__spawn {
-        display: none;
-      }
-      &__img {
-        display: block;
-        width: 16rem;
-        height: 20rem;
-      }
-
-      &:first-child {
-        margin: 2.5rem 0 0 0;
-      }
-
-      &__text {
-        padding: 2rem;
+      padding-bottom: 5rem;
+      > img {
+        width: auto;
+        height: 90%;
       }
     }
   }
