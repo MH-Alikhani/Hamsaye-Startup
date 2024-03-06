@@ -3,14 +3,12 @@
 @import "../../base/mixins";
 
 body {
-  background-image: linear-gradient(
+  background: linear-gradient(
       to right bottom,
       rgba($color-body, 0.8),
       rgba($color-primary, 0.8)
     ),
-    url("/assets/images/wallpaper/5.jpg");
-  background-size: cover;
-  background-position: center;
+    url("/assets/images/wallpaper/5.jpg") no-repeat center/cover;
 }
 
 .about-page {
@@ -18,7 +16,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
   padding: 0 10rem;
-
   height: 87vh;
 
   > section {
@@ -31,8 +28,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 2rem 0 10rem 0;
-
+    padding: 2rem 0 10rem;
     background: rgb($color-body, 0.7);
 
     > a {
@@ -40,7 +36,10 @@ body {
       height: 100%;
       display: block;
       position: absolute;
+      top: 0;
+      left: 0;
       z-index: 100;
+      opacity: 0;
     }
 
     > img {
@@ -52,6 +51,7 @@ body {
       font-size: 2.2rem;
     }
   }
+
   section:last-child {
     margin-right: 1rem;
   }
@@ -67,10 +67,12 @@ body {
 @include respond(phone) {
   .about-page {
     flex-direction: column;
+
     > section {
       height: 40%;
       width: 100%;
       padding-bottom: 5rem;
+
       > img {
         width: auto;
         height: 90%;

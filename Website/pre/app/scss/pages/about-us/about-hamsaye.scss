@@ -7,7 +7,7 @@ body {
 
 .about-hamsaye {
   height: auto;
-  padding: 5rem 3rem 1rem 3rem;
+  padding: 5rem 3rem 1rem;
 }
 
 .subjects {
@@ -17,29 +17,37 @@ body {
   flex-direction: column;
   justify-content: center;
 
+  > h1,
+  > h2 {
+    font-weight: bold;
+  }
+
   > h1 {
     font-size: 2.5rem;
-    font-weight: bold;
   }
 
   > h2 {
     font-size: 2rem;
-    font-weight: bold;
     &:first-child {
       padding-bottom: 1rem;
     }
   }
+
   ul > li {
     list-style: none;
     margin-bottom: 1rem;
-    > h3 {
-      font-size: 1.5rem;
-      font-weight: bold;
+
+    > h3,
+    > p {
       display: inline;
     }
 
+    > h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
     > p {
-      display: inline;
       font-size: 1.4rem;
     }
   }
@@ -54,24 +62,23 @@ body {
   body {
     display: flex;
     flex-direction: column-reverse;
-    background-image: linear-gradient(
+    background: linear-gradient(
         to right bottom,
         rgba($color-body, 0.8),
         rgba($color-primary, 0.8)
       ),
-      url("/assets/images/wallpaper/5.jpg");
-    background-size: cover;
-    background-position: center;
+      url("/assets/images/wallpaper/5.jpg") no-repeat center/cover;
     height: auto;
+
     .about-hamsaye {
       padding-top: 2rem;
     }
-  }
 
-  .header {
-    position: sticky;
-    bottom: 0;
-    left: 0;
+    .header {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 

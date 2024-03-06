@@ -18,6 +18,9 @@
           size: 12rem;
           weight: bold;
         }
+        @include respond(desktop) {
+          animation: moveInRight 2.5s;
+        }
       }
       &:last-child {
         font-size: 3.2rem;
@@ -39,6 +42,9 @@
       left: 35%;
       top: 58%;
       z-index: -1;
+      @include respond(desktop) {
+        animation: rotation 2.5s;
+      }
     }
 
     // Home banner
@@ -76,18 +82,7 @@
     }
   }
 }
-@include setAnimation(phone) {
-  .home {
-    &-title {
-      animation: moveInRight 2.5s;
-    }
-    > .home-banner {
-      .banner-square {
-        animation: rotation 2.5s;
-      }
-    }
-  }
-}
+
 // Responsive styles for tablet portrait screens
 @include respond(tab-port) {
   body {

@@ -2,17 +2,15 @@
 @import "../base/mixins";
 @import "../base/animation";
 
-// Styles for the .contact-us section
 .contact-us {
   display: flex;
   height: 87vh;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-image: url("/assets/images/circles.png");
+  background: url("/assets/images/circles.png");
   background-size: cover;
 
-  // Styles for the .mail-box section
   > section {
     width: 100%;
     height: 10rem;
@@ -21,13 +19,13 @@
     align-items: center;
     justify-content: space-evenly;
 
-    // Styles for the .mail-box__img section
     > img {
-      animation: moveInRight 1.4s ease-out;
       width: 10rem;
+      @include respond(desktop) {
+        animation: moveInRight 1.4s ease-out;
+      }
     }
 
-    // Styles for the .mail-box__text-box section
     > h2 {
       display: flex;
       flex-direction: column;
@@ -35,22 +33,27 @@
       text-align: center;
       font-weight: bold;
       font-family: $vazir-regular;
-      animation: InvisibleMagic 4s;
 
-      // Styles for the .mail-box__text-box__head section
-      > a:first-child {
-        font-size: 4rem;
+      > a {
         transition: all 0.5s;
-        &:hover {
-          color: $color-text-gold;
-        }
-      }
 
-      // Styles for the .mail-box__text-box__link section
-      > a:last-child {
-        font-size: 1.6rem;
-        color: $color-text-gold;
-        opacity: 1;
+        &:first-child {
+          font-size: 4rem;
+          @include respond(desktop) {
+            &:hover {
+              transform: translateY(-3px);
+            }
+          }
+        }
+
+        &:last-child {
+          font-size: 1.6rem;
+          color: $color-text-gold;
+          opacity: 1;
+          @include respond(desktop) {
+            animation: InvisibleMagic 4s;
+          }
+        }
       }
     }
   }
@@ -59,20 +62,20 @@
     margin-top: 10rem;
 
     > img {
-      animation: moveInRight 1.4s ease-out;
       width: 10rem;
+      @include respond(desktop) {
+        animation: moveInRight 1.4s ease-out;
+      }
     }
   }
 }
 
-// Responsive styles for phone screens
 @include respond(phone) {
   .contact-us > section {
     padding-right: 45%;
   }
 }
 
-// Responsive styles for tablet portrait screens
 @include respond(tab-port) {
   body {
     display: flex;
@@ -95,10 +98,8 @@
       }
     }
 
-    > section:last-child {
-      > img {
-        width: 6rem;
-      }
+    section:last-child > img {
+      width: 6rem;
     }
   }
 }

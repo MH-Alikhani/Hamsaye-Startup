@@ -1,4 +1,3 @@
-// Import base variables and mixins
 @import "../../base/mixins";
 @import "../../base/variables";
 
@@ -6,9 +5,6 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-
   width: 100%;
   height: 83vh;
   padding-top: 1rem;
@@ -20,14 +16,12 @@
     border: 1px solid #e8dfd9;
   }
 
-  // Grid boxes
   .box1 {
     grid-area: 1 / 1 / 2 / 9;
   }
   .box2 {
     grid-area: 2 / 4 / 5 / 6;
   }
-
   .box3 {
     grid-area: 5 / 1 / 6 / 9;
   }
@@ -39,46 +33,42 @@
   }
 }
 
-// Titles
 .title {
   font-size: 2rem;
   color: #7e634e;
 }
 
-// CEO & Devs
 .member-wraper {
   padding: 0.5rem;
   flex-flow: column;
   font-size: 1.3rem;
-  border-bottom: none;
-  border-top: none;
+
   > img {
     height: 65%;
     border-radius: 50%;
     margin-bottom: 1rem;
   }
+
   > h3:last-child {
     color: #652a3c;
     font-weight: bold;
   }
 }
 
-// Apply responsive styling for tablet and mobile devices
 @include respond(tab-port) {
   body {
     display: flex;
     flex-direction: column-reverse;
   }
+
   .about-member-conainer {
     padding-top: 0;
-    background-image: linear-gradient(
+    background: linear-gradient(
         to right bottom,
         rgba($color-body, 0.8),
         rgba($color-primary, 0.8)
       ),
-      url("/assets/images/wallpaper/5.jpg");
-    background-size: cover;
-    background-position: center;
+      url("/assets/images/wallpaper/5.jpg") no-repeat center/cover;
 
     > * {
       border-color: $color-gold-2;
@@ -95,10 +85,12 @@
     padding: 0.25rem;
     font-size: 1.1rem;
     text-align: center;
+
     > img {
       width: 60%;
       height: auto;
     }
+
     > h3:last-child {
       padding-top: 0.4rem;
     }
