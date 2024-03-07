@@ -48,10 +48,16 @@
     border-radius: 50%;
     margin-bottom: 1rem;
   }
-
-  > h3:last-child {
-    color: #652a3c;
-    font-weight: bold;
+  > h3 {
+    > a {
+      > span:last-child {
+        white-space: nowrap;
+      }
+    }
+    &:last-child {
+      color: #652a3c;
+      font-weight: bold;
+    }
   }
 }
 
@@ -83,7 +89,7 @@
 
   .member-wraper {
     padding: 0.25rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: center;
 
     > img {
