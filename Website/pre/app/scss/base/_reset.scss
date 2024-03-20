@@ -29,19 +29,20 @@ html {
 
 // Global styles for the body
 body {
-  height: 100vh;
-  overflow: hidden;
-  background-color: $color-body;
+  height: 100svh;
+  width: 100%;
 }
 
 // Header styling
 header {
-  height: 17vh;
+  height: 17%;
+  width: 100%;
 }
 
 // Main content styling
 main {
-  height: 90vh;
+  height: 83%;
+  width: 100%;
 }
 
 // Global link styling

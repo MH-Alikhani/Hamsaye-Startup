@@ -1,12 +1,8 @@
 @import "../../base/variables";
 @import "../../base/mixins";
 
-body {
-  overflow-y: auto;
-}
-
 .about-hamsaye {
-  height: auto;
+  overflow-y: auto;
   padding: 5rem 3rem 1rem;
 }
 
@@ -62,13 +58,13 @@ body {
   body {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: space-between;
     background: linear-gradient(
         to right bottom,
         rgba($color-body, 0.8),
         rgba($color-primary, 0.8)
       ),
       url("/assets/images/wallpaper/5.jpg") no-repeat center/cover;
-    height: auto;
 
     .about-hamsaye {
       padding-top: 2rem;

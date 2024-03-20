@@ -16,7 +16,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
   padding: 0 10rem;
-  height: 87vh;
 
   > section {
     position: relative;
@@ -62,9 +61,6 @@ body {
     display: flex;
     flex-direction: column-reverse;
   }
-}
-
-@include respond(phone) {
   .about-page {
     flex-direction: column;
 
@@ -77,6 +73,9 @@ body {
         width: auto;
         height: 90%;
       }
+    }
+    section:last-child {
+      margin-right: 0;
     }
   }
 }

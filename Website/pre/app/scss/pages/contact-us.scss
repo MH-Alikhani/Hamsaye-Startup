@@ -4,12 +4,10 @@
 
 .contact-us {
   display: flex;
-  height: 87vh;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: url("/assets/images/circles.png");
-  background-size: cover;
+  background: url("/assets/images/circles.png") no-repeat bottom left/cover;
 
   > section {
     width: 100%;
@@ -18,6 +16,10 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    &:last-child {
+      margin-top: 7rem;
+    }
 
     > img {
       width: 10rem;
@@ -54,17 +56,6 @@
             animation: InvisibleMagic 4s;
           }
         }
-      }
-    }
-  }
-
-  section:last-child {
-    margin-top: 10rem;
-
-    > img {
-      width: 10rem;
-      @include respond(desktop) {
-        animation: moveInRight 1.4s ease-out;
       }
     }
   }

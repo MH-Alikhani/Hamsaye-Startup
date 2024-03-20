@@ -1,1 +1,144 @@
-@keyframes moveInLeft{0%{opacity:0;transform:translateX(-5rem)}80%{transform:translateX(3rem)}100%{opacity:1;transform:translateX(0)}}@keyframes moveInRight{0%{opacity:0;transform:translateX(5rem)}80%{transform:translateX(-2rem)}100%{opacity:1;transform:translateX(0)}}@keyframes moveInBottom{0%{opacity:0;transform:translateY(3rem)}100%{opacity:1;transform:translate(0)}}@keyframes rotation{0%{opacity:.5;transform:rotate(0deg) translate(-50%, -50%)}100%{opacity:1;transform:rotate(15deg) translate(-50%, -50%)}}@keyframes InvisibleMagic{0%{opacity:.1}100%{opacity:1}}@keyframes parallax{0%{box-shadow:0 20px 40px #b9a08d}100%{box-shadow:0 0 0px #b9a08d}}@keyframes pulse{0%{box-shadow:0 0 10px #b9a08d}100%{box-shadow:0 0 20px #b9a08d}}@keyframes text-shadow-slide{0%{text-shadow:4px 4px 8px #b9a08d}100%{text-shadow:1px 1px 2px #b9a08d}}body{background:linear-gradient(to right bottom, rgba(247, 244, 242, 0.8), rgba(224, 213, 204, 0.8)),url("/assets/images/wallpaper/5.jpg") no-repeat center/cover}.about-page{display:flex;align-items:center;justify-content:space-evenly;padding:0 10rem;height:87vh}.about-page>section{position:relative;height:400px;width:300px;border-radius:10px;border:1.4px solid #b9a08d;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:2rem 0 10rem;background:rgba(247,244,242,.7)}.about-page>section>a{width:100%;height:100%;display:block;position:absolute;top:0;left:0;z-index:100;opacity:0}.about-page>section>img{width:70%;display:block}.about-page>section>h2{font-size:2.2rem}.about-page section:last-child{margin-right:1rem}@media(max-width: 56.25em){body{display:flex;flex-direction:column-reverse}}@media(max-width: 37.5em){.about-page{flex-direction:column}.about-page>section{height:40%;width:100%;padding-bottom:5rem}.about-page>section>img{width:auto;height:90%}}/*# sourceMappingURL=about-page.css.map */
+/*animation*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  80% {
+    transform: translateX(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    opacity: 0.5;
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(15deg) translate(-50%, -50%);
+  }
+}
+@keyframes InvisibleMagic {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes parallax {
+  0% {
+    box-shadow: 0 20px 40px #b9a08d;
+  }
+  100% {
+    box-shadow: 0 0 0px #b9a08d;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #b9a08d;
+  }
+  100% {
+    box-shadow: 0 0 20px #b9a08d;
+  }
+}
+@keyframes text-shadow-slide {
+  0% {
+    text-shadow: 4px 4px 8px #b9a08d;
+  }
+  100% {
+    text-shadow: 1px 1px 2px #b9a08d;
+  }
+}
+body {
+  background: linear-gradient(to right bottom, rgba(247, 244, 242, 0.8), rgba(224, 213, 204, 0.8)), url("/assets/images/wallpaper/5.jpg") no-repeat center/cover;
+}
+
+.about-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 10rem;
+}
+.about-page > section {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1.4px solid #b9a08d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem 0 10rem;
+  background: rgba(247, 244, 242, 0.7);
+}
+.about-page > section > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+}
+.about-page > section > img {
+  width: 70%;
+  display: block;
+}
+.about-page > section > h2 {
+  font-size: 2.2rem;
+}
+.about-page section:last-child {
+  margin-right: 1rem;
+}
+
+@media (max-width: 56.25em) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-page {
+    flex-direction: column;
+  }
+  .about-page > section {
+    height: 40%;
+    width: 100%;
+    padding-bottom: 5rem;
+  }
+  .about-page > section > img {
+    width: auto;
+    height: 90%;
+  }
+  .about-page section:last-child {
+    margin-right: 0;
+  }
+}/*# sourceMappingURL=about-page.css.map */
